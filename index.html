@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" href="img/darthwader-logo.png" type="image/gif" />
+    <script
+      src="https://kit.fontawesome.com/e577b103f1.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Inlämningsuppgift - Jonas Tern</title>
+  </head>
+  <body>
+    <section id="content-container">
+      <img
+        id="background-image"
+        src="img/backgrounds/star-wars-backgrounds-25.jpg"
+      />
+      <div id="header">
+        <span>
+          <img src="img/logos/starwarslogo.png" alt="Star Wars Logo" />
+        </span>
+      </div>
+      <div id="movie-container">
+        <span id="left-button" onclick="leftClick()"
+          ><i class="fas fa-arrow-alt-circle-left"></i
+        ></span>
+        <span id="right-button" onclick="rightClick()"
+          ><i class="fas fa-arrow-alt-circle-right"></i
+        ></span>
+        <div class="row-one">
+          <div class="movie-card movie-one" onclick="movieOne()">
+            <div class="movie-image">
+              <img src="img/movies/new-hope.jpg" />
+            </div>
+            <div class="movie-info">
+              <div class="skeleton skeleton-h1"></div>
+              <div class="skeleton skeleton-h2"></div>
+            </div>
+          </div>
+          <div class="movie-card movie-two" onclick="movieTwo()">
+            <div class="movie-image">
+              <img src="img/movies/empire-strikes-back.jpg" />
+            </div>
+            <div class="movie-info">
+              <div class="skeleton skeleton-h1"></div>
+              <div class="skeleton skeleton-h2"></div>
+            </div>
+          </div>
+          <div class="movie-card movie-three" onclick="movieThree()">
+            <div class="movie-image">
+              <img src="img/movies/return-of-the-jedi.jpg" />
+            </div>
+            <div class="movie-info">              
+              <div class="skeleton skeleton-h1"></div>
+              <div class="skeleton skeleton-h2"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row-two">
+          <div class="movie-card movie-four" onclick="movieFour()">
+            <div class="movie-image">
+              <img src="img/movies/phantom-menace.jpg" />
+            </div>
+            <div class="movie-info">              
+              <div class="skeleton skeleton-h1"></div>
+              <div class="skeleton skeleton-h2"></div>
+            </div>
+          </div>
+          <div class="movie-card movie-five" onclick="movieFive()">
+            <div class="movie-image">
+              <img src="img/movies/attack-of-the-clones.jpg" />
+            </div>
+            <div class="movie-info">              
+              <div class="skeleton skeleton-h1"></div>
+              <div class="skeleton skeleton-h2"></div>
+            </div>
+          </div>
+          <div class="movie-card movie-six" onclick="movieSix()">
+            <div class="movie-image">
+              <img src="img/movies/revenge-of-the-sith.jpg" />
+            </div>
+            <div class="movie-info">              
+              <div class="skeleton skeleton-h1"></div>
+              <div class="skeleton skeleton-h2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <span class="navigation-dots">
+        <i class="far fa-circle dot-one"></i>
+        <i class="far fa-circle dot-two"></i>
+      </span>
+    </section>
+    <section id="modal-section">
+      <div class="lightsabers">
+        <span class="lightsaber-one">
+          <span class="lightsaber-handle-one"
+            ><img src="img/lightsaber-handle.png"
+          /></span>
+          <span class="blade-one"></span>
+        </span>
+        <span class="lightsaber-two">
+          <span class="lightsaber-handle-two"
+            ><img src="img/lightsaber-handle.png"
+          /></span>
+          <span class="blade-two"></span>
+        </span>
+      </div>
+      <div id="modal">
+        <span class="exit-button" onclick="exitModal()">
+          <img class="exit-button-one" src="img/lightsaber.png" />
+          <img class="exit-button-two" src="img/lightsaber.png" />
+        </span>
+        <div class="modal-header"></div>
+        <div class="modal-info"></div>
+      </div>
+      <div class="new-hope-modal">
+        <img class="new-hope-logo" src="img/logos/new-hope-logo.png" />
+        <img class="new-hope-characters" src="img/characters/r2d2-c3po.png" />
+      </div>
+      <div class="empire-strikes-modal">
+        <img
+          class="empire-strikes-logo"
+          src="img/logos/empire-strikes-logo.png"
+        />
+        <img
+          class="empire-strikes-characters"
+          src="img/characters/luke-skywalker.png"
+        />
+        <img class="empire-strikes-yoda" src="img/characters/yoda.png" />
+      </div>
+      <div class="return-jedi-modal">
+        <img
+          class="return-jedi-logo"
+          src="img/logos/return-of-the-jedi-logo.png"
+        />
+        <img class="return-jedi-characters" src="img/characters/han-solo.png" />
+      </div>
+      <div class="phantom-menace-modal">
+        <img class="phantom-menace-logo" src="img/logos/phantom-menace.png" />
+        <img
+          class="phantom-menace-characters"
+          src="img/characters/qui-gon-jinn.png"
+        />
+      </div>
+      <div class="attack-clones-modal">
+        <img
+          class="attack-clones-logo"
+          src="img/logos/attack-clones-logo.png"
+        />
+        <img
+          class="attack-clones-characters"
+          src="img/characters/anakin-skywalker.png"
+        />
+      </div>
+      <div class="revenge-sith-modal">
+        <img class="revenge-sith-logo" src="img/logos/revenge-sith.png" />
+        <img
+          class="revenge-sith-characters"
+          src="img/characters/mace-windu.png"
+        />
+      </div>
+    </section>
+  </body>
+  <script src="js/app.js"></script>
+</html>

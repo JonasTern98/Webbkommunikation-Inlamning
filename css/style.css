@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+@font-face {
+  font-family: "distant-galaxy";
+  src: url('fonts/distans-galaxy/distgrg_-webfont.woff2') format('woff2'),
+       url('fonts/distans-galaxy/distgrg_-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body{
+  overflow: hidden;
+}
+#content-container{
+  width: 100%;
+  height: 100vh;
+}
+#background-image{
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+#header {
+  width: 100%;
+  height: 20vh;
+  background-color: transparent;
+}
+#header span img{
+  width: 20%;
+  height: auto;
+  position: absolute;
+  top: 3%;
+  left: 40%;
+}
+#movie-container{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+#left-button{
+  position: absolute;
+  top: 50%;
+  left: 4%;
+}
+#right-button{
+  position: absolute;
+  top: 50%;
+  right: 4%;
+}
+#left-button i,
+#right-button i{
+  font-size: 5rem;
+  color: white;
+  cursor: pointer;
+}
+.row-one,
+.row-two{
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px;
+}
+.row-one{
+  display: flex;
+}
+.row-two{
+  display: none;
+}
+.movie-card{
+  width: 20%;
+  height: 60vh;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(255,255,255,0.05), 5px 10px 10px rgba(255,255,255,0.32);
+  cursor: pointer;
+}
+.movie-image{
+  width: 100%;
+  height: 50vh;
+}
+.movie-image img{
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+.movie-info{
+  width: 100%;
+  height: 10vh;
+  border-radius: 0 0 10px 10px;
+  background-color: #f8da2b;
+}
+.movie-info h1{
+  font-family: "distant-galaxy", Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  padding: 10px 5px 5px 5px;
+}
+.movie-info h2{
+  font-family: "distant-galaxy", Arial, Helvetica, sans-serif;
+  font-size: 1.8rem;
+  text-align: center;
+}
+.skeleton{
+  opacity: 0.5;
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+.skeleton-h1{
+  position: relative;
+  top: 15%;
+  left: 5%;
+  width: 90%;
+  height: 2rem;
+  border-radius: 10px;
+}
+.skeleton-h2{
+  position: relative;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 1.8rem;
+  border-radius: 10px;
+}
+@keyframes skeleton-loading {
+  0%{
+    background-color: hsl(200, 20%, 70%);
+  }
+  100%{
+    background-color: hsl(200, 20%, 95%);
+  }
+}
+.navigation-dots{
+  position: absolute;
+  bottom: 5%;
+  left: 48.5%;
+}
+.navigation-dots i{
+  font-size: 1.5rem;
+  color: #f8da2b;
+  margin-left: 10px;
+}
+.dot-one{
+  background-color: #f8da2b;
+  border-radius: 10px;
+}
+/*LIGHTSABER SECTION*/
+.lightsabers{
+  width: 50%;
+  height: 60vh;
+  display: none;
+  background-color: transparent;
+  position: relative;
+  top: 20%;
+  left: 25%;
+}
+.lightsaber-one{
+  width: 20%;
+  height: 50vh;
+  background-color: transparent;
+  position: absolute;
+  top: 7.5%;
+  left: 25%;
+  animation-name: cross-right;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  transform-origin: bottom;
+  animation-fill-mode: forwards;
+}
+@keyframes cross-right {
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(35deg);
+  }
+}
+.lightsaber-two{
+  width: 20%;
+  height: 50vh;
+  background-color: transparent;
+  position: absolute;
+  top: 7.5%;
+  right: 25%;
+  animation-name: cross-left;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  transform-origin: bottom;
+  animation-fill-mode: forwards;
+}
+@keyframes cross-left {
+  from{
+    transform: rotate(0);
+  }
+  to{
+    transform: rotate(-35deg);
+  }
+}
+.lightsaber-handle-one img{
+  width: 70%;
+  height: auto;
+  position: absolute;
+  bottom:1%;
+  right: 15%;
+  z-index: 3;
+}
+.lightsaber-handle-two img{
+  width: 70%;
+  height: auto;
+  position: absolute;
+  bottom:1%;
+  right: 15%;
+  z-index: 3;
+}
+.blade-one{
+  width: 10px;
+  height: 250px;
+  border-radius: 5px 5px 0 0;
+  background-color: #00ffff;
+  box-shadow:
+  0 0 42px #00ffff,
+    0 0 52px #00ffff,
+    0 0 62px #00ffff,
+    0 0 72px #00ffff,
+    0 0 91px #00ffff;
+    position: absolute;
+    bottom: 26%;
+    right: 46%;
+    z-index: 2;
+    animation-name: lightsaber;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    transform-origin: bottom;
+  }
+  .blade-two{
+    width: 10px;
+    height: 250px;
+  border-radius: 5px 5px 0 0;
+  background-color: red;
+  box-shadow:
+  0 0 42px red,
+  0 0 52px red,
+  0 0 62px red,
+    0 0 72px red,
+    0 0 91px red;
+    position: absolute;
+    bottom: 26%;
+    right: 46%;
+    z-index: 2;
+    animation-name: lightsaber;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    transform-origin: bottom;
+  }
+  @keyframes lightsaber {
+    from{
+      transform: scaleY(0);
+    }
+  to{
+    transform: scaleY(1);
+  }
+}
+/*MODAL SECTION*/
+#modal-section{
+  width: 100%;
+  height: 100vh;
+}
+#modal{
+  width: 35%;
+  height: 80vh;
+  position: fixed;
+  top: 10%;
+  left: 32.5%;
+  z-index: 4;
+  background-color: white;
+  border-radius: 10px;
+  display: none; /*REMOVE TO SHOW MODAL*/
+  flex-direction: column;
+}
+.modal-header{
+  width: 100%;
+  height: 12.5vh;
+  border-bottom: 1px solid black;
+}
+.modal-header h1{
+  font-size: 3rem;
+  padding: 10px 20px 0 20px;
+}
+.modal-header h2{
+  font-size: 2.2rem;
+  padding: 5px 20px;
+}
+.modal-info{
+  width: 100%;
+  height: 67.5vh;
+  padding: 5%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  overflow: auto;
+}
+.modal-info h1{
+  text-align: center;
+  font-size: 2rem;
+}
+.modal-info p {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  text-align: center;
+}
+.exit-button{
+  position: fixed;
+  top: 6%;
+  right: 30.3%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+.exit-button-one{
+  width: 75%;
+  position: absolute;
+  top: 13%;
+  left: 15%;
+}
+.exit-button-two{
+  width: 75%;
+  position: absolute;
+  top: 13%;
+  left: 15%;
+  transform: rotateY(180deg);
+}
+/*MODAL-SECTION MOVIES*/
+.new-hope-modal,
+.empire-strikes-modal,
+.return-jedi-modal,
+.phantom-menace-modal,
+.attack-clones-modal,
+.revenge-sith-modal{
+  display: none;
+}
+.new-hope-logo,
+.empire-strikes-logo,
+.return-jedi-logo,
+.phantom-menace-logo,
+.attack-clones-logo,
+.revenge-sith-logo{
+  width: 7%;
+  height: auto;
+  position: fixed;
+  top: 11.5%;
+  left: 35%;
+  z-index: 5;
+}
+.phantom-menace-logo,
+.revenge-sith-logo{
+  width: 12.5%;
+  top: 12.5%;
+}
+.return-jedi-logo{
+  width: 20%;
+  top: 11.5%;
+}
+.empire-strikes-logo{
+  width: 10%;
+  top: 9%;
+  transform: rotate(13deg);
+}
+.attack-clones-logo{
+  width: 13%;
+}
+.new-hope-characters,
+.empire-strikes-characters,
+.empire-strikes-yoda,
+.return-jedi-characters,
+.phantom-menace-characters,
+.attack-clones-characters,
+.revenge-sith-characters{
+  position: fixed;
+  width: 20%;
+  top: 35%;
+  right: 22.5%;
+  z-index: 5;
+}
+.new-hope-characters{
+  top: 44%;
+  right: 21%;
+  transform: rotateY(180deg);
+}
+.empire-strikes-characters{
+  width: 17.5%;
+  top: 13.5%;
+  left: 22.5%;
+}
+.empire-strikes-yoda{
+  width: 15%;
+  top: 50%;
+  right: 23%;
+  transform: rotate(0deg);
+}
+.return-jedi-characters{
+  top: 26.5%;
+  left: 22.5%;
+}
+.phantom-menace-characters{
+  transform: rotateY(180deg);
+  top: 22.5%;
+  left: 20%;
+}
+.attack-clones-characters{
+  width: 25%;
+  top: 40%;
+  left: 12.5%;
+  transform: rotateY(180deg);
+}
+.revenge-sith-characters{
+  top: 21%;
+  left: 18%;
+}
